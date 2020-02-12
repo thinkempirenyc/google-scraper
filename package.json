@@ -7,19 +7,22 @@
     "start": "node .",
     "build": "tsc -b",
     "dev": "tsnd --respawn src/index.ts",
-    "lint": "./node_modules/.bin/prettier --write src/**/*.js && ./node_modules/.bin/prettier --write lib/**/*.js && ./node_modules/.bin/prettier --write index.js"
+    "lint": "./node_modules/.bin/prettier --write src/**/*.js && ./node_modules/.bin/prettier --write lib/**/*.js && ./node_modules/.bin/prettier --write index.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "get-urls": "^9.2.0",
+    "node-fetch": "^2.6.0",
     "querystring": "^0.2.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.16",
     "@types/jest": "^25.1.2",
+    "@types/node-fetch": "^2.5.4",
     "@types/request": "^2.48.4",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.0",
