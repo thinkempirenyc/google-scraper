@@ -17,6 +17,7 @@
     "get-urls": "^9.2.0",
     "node-fetch": "^2.6.0",
     "querystring": "^0.2.0",
+    //deprecated
     "request": "^2.88.0"
   },
   "devDependencies": {
