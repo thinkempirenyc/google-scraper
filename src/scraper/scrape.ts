@@ -1,7 +1,5 @@
 import fetch from 'node-fetch';
-import request from 'request';
 import cheerio from 'cheerio';
-import getUrls from 'get-urls';
 import querystring from 'querystring';
 import { urlSearch, selectorSearch, SearchOptions } from './config';
 
@@ -69,12 +67,5 @@ export default class GoogleScraper {
       });
     });
     return arrayLinks;
-  }
-
-  /**
-   *NOT BEING USED AT THIS TIME!!
-   */
-  getUris(html: string): Set<string> {
-    return getUrls(html);
   }
 }
