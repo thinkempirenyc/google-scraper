@@ -8,5 +8,5 @@
     - ```const options = {query: 'josh rahmani', language: 'en', results: 10}```
     - ```const SocialMediaLinks = new SocialMediaScraper(options)```
   
-  - ```const data = await scraper.getGoogleLinks().  //data is a Set()```
+  - ```const data = await SocialMediaLinks.getGoogleLinks().  //data is a Set()```
   
