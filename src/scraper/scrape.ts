@@ -5,16 +5,14 @@ import { urlSearch, selectorSearch, SearchOptions } from './config';
 
 export default class GoogleScraper {
   public options: SearchOptions;
-
   constructor(options: SearchOptions) {
     this.options = options;
   }
-
   /**
    * getGoogleLinks takes no arguments.
-   * The return value is an array of links.
+   * The return value is an Set of links.
    */
-  getGoogleLinks(): Promise<any> {
+  getGoogleLinks(): Promise<Set<Object>> {
     return new Promise((resolve, reject) => {
       this.getHtml()
         .then(body => {
@@ -25,7 +23,6 @@ export default class GoogleScraper {
         });
     });
   }
-
   /**
    * getHtml takes public property `options`
    * It makes a google search request available `options`
@@ -41,13 +38,12 @@ export default class GoogleScraper {
       })
     );
   }
-
   /**
    * extractLink takes html body returned in getHtml()
    * The return value is an array of links
    * @param htmlArray
    */
-  extractLinks(htmlArray: []): Set<any> {
+  extractLinks(htmlArray: []): Set<Object> {
     let arrayLinks = new Set();
     htmlArray.map(html => {
       const $ = cheerio.load(html);
