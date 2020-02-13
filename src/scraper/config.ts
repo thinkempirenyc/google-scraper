@@ -16,7 +16,7 @@ export const urlSearch = options => {
     else computedQuery = `${queryArr.join()}+${site}`;
 
     return `https://www.google.com/search?num=${results}&hl=${language}&q=${computedQuery}&oq=${computedQuery}`;
-  })
+  });
 };
 
 /**
@@ -30,4 +30,17 @@ export interface SearchOptions {
   query: string;
   language: string;
   results: number;
+}
+
+export interface SocialMediaData {
+  url: string;
+  type: SocialMediaTypes;
+  image?: string;
+}
+
+export enum SocialMediaTypes {
+  TWITTER,
+  INSTAGRAM,
+  FACEBOOK,
+  LINKEDIN,
 }
